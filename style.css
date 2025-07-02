@@ -1,0 +1,40 @@
+#carouselExampleCaptions img {
+  height: 60vh;  /* 60% of the viewport height */
+  object-fit: fill;
+  width: 100%;
+}
+.card:hover {
+transform: translateY(-5px);
+transition: 0.3s ease-in-out;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+height: 220px;
+object-fit: cover;
+}
+.card-body{
+background-color: #343a40;
+color: white;
+}
+.btn-brand{
+background-color: #f4c430;
+border: none;
+color: #000;
+}
+.btn-brand:hover {
+background-color: #e0b300;
+color: #000;
+}
+.btn-brand {
+  background-color: #f4c430;
+  border: none;
+  color: #000;
+}
+.btn-brand:hover {
+  background-color: #e0b300;
+  color: #000;
+}
+.nav-link:hover {
+  color: #f4c430 !important;
+  transition: 0.3s;
+}

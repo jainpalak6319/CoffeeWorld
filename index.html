@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand text-warning fw-bold" href="#">Coffee World</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-warning" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Blends</a></li>
+            <li><a class="dropdown-item" href="#">Special Editions</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Gift Boxes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled text-secondary" href="#" tabindex="-1" aria-disabled="true">Coming Soon</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-warning text-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/coffee1.jpg" class="d-block w-100" alt="coffee">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Freshness</h5>
+        <p>Freshly roasted beans are crucial for optimal flavor and aroma.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/coffee2.png" class="d-block w-100" alt="coffee">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Aroma</h5>
+        <p>A rich, vibrant aroma is a strong indicator of quality. </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/coffee3.webp" class="d-block w-100" alt="coffee">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Acidity</h5>
+        <p>A balanced acidity contributes to the coffee's brightness and vibrancy, enhancing the overall flavor profile.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container py-5">
+    <h2 class="text-center mb-4">Our Top Coffee Brands</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/starbucks.avif" class="card-img-top" alt="Starbucks">
+          <div class="card-body">
+            <h5 class="card-title">Starbucks</h5>
+            <p class="card-text">Premium blends and iconic flavors from one of the world’s most recognized coffee brands.</p>
+            <button class="btn btn-brand mt-2" data-bs-toggle="modal" data-bs-target="#starbucksModal">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/nescafe.jpg" class="card-img-top" alt="Nescafé">
+          <div class="card-body">
+            <h5 class="card-title">Nescafé</h5>
+            <p class="card-text">Quick, convenient, and satisfying — Nescafé brings instant joy to millions of coffee lovers.</p>
+            <button class="btn btn-brand mt-2" data-bs-toggle="modal" data-bs-target="#nescafeModal">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="images/bbcoffee.jpg" class="card-img-top" alt="Blue Bottle Coffee">
+          <div class="card-body">
+            <h5 class="card-title">Blue Bottle</h5>
+            <p class="card-text">Freshly roasted, specialty coffee with a minimalist vibe and modern brewing excellence.</p>
+            <button class="btn btn-brand mt-2" data-bs-toggle="modal" data-bs-target="#blueBottleModal">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Starbucks Modal -->
+  <div class="modal fade" id="starbucksModal" tabindex="-1" aria-labelledby="starbucksModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="starbucksModalLabel">Starbucks</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Starbucks offers premium Arabica blends sourced globally. Known for consistency and quality, they also promote ethical sourcing and community involvement.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nescafé Modal -->
+  <div class="modal fade" id="nescafeModal" tabindex="-1" aria-labelledby="nescafeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="nescafeModalLabel">Nescafé</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Nescafé by Nestlé is one of the largest instant coffee brands worldwide. It blends convenience with a smooth taste, available in classic, gold, and flavored varieties.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blue Bottle Modal -->
+  <div class="modal fade" id="blueBottleModal" tabindex="-1" aria-labelledby="blueBottleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="blueBottleModalLabel">Blue Bottle Coffee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Blue Bottle is a specialty roaster focused on freshness. Coffee is roasted to order, shipped quickly, and served in their modern minimalist cafes with precision brewing.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Contact Form Section -->
+<div class="container my-5">
+  <h3 class="text-center mb-4">Contact Us</h3>
+  <form class="row g-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="name" placeholder="John Doe">
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Your Email</label>
+      <input type="email" class="form-control" id="email" placeholder="john@example.com">
+    </div>
+    <div class="col-12">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+    </div>
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-brand px-5">Send Message</button>
+    </div>
+  </form>
+</div>
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 Coffee World. All rights reserved.</p>
+    <p class="mb-0">
+      Follow us:
+      <a href="#" class="text-warning text-decoration-none mx-1">Instagram</a> |
+      <a href="#" class="text-warning text-decoration-none mx-1">Facebook</a> |
+      <a href="#" class="text-warning text-decoration-none mx-1">Twitter</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
