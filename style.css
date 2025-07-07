@@ -1,12 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
 #carouselExampleCaptions img {
   height: 60vh;  /* 60% of the viewport height */
   object-fit: fill;
   width: 100%;
 }
 .card:hover {
-transform: translateY(-5px);
-transition: 0.3s ease-in-out;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 .card-img-top {
 height: 220px;
@@ -16,15 +19,7 @@ object-fit: cover;
 background-color: #343a40;
 color: white;
 }
-.btn-brand{
-background-color: #f4c430;
-border: none;
-color: #000;
-}
-.btn-brand:hover {
-background-color: #e0b300;
-color: #000;
-}
+
 .btn-brand {
   background-color: #f4c430;
   border: none;
@@ -38,3 +33,74 @@ color: #000;
   color: #f4c430 !important;
   transition: 0.3s;
 }
+/*==============Landing Page==============*/
+.about-section {
+  background-size: cover;
+  background-position: center;
+  border-top: 2px solid #6f4e37;
+  border-bottom: 2px solid #6f4e37;
+}
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: relative;
+}
+
+.overlay {
+  z-index: 1;
+}
+
+.hero-section .container {
+  z-index: 2;
+}
+
+  .text-shadow {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+
+ .scroll-down-arrow {
+  z-index: 3;
+  animation: bounce 2s infinite;
+  padding-bottom: 20px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+.featured-products {
+  border-top: 2px solid #6f4e37;
+}
+footer.footer {
+  border-top: 2px solid #6f4e37;
+  font-size: 0.95rem;
+}
+.about-section img,
+.about-section .row {
+  margin-bottom: 0;
+}
+/*=====================About Page====================*/
+.about-hero {
+  position: relative;
+}
+
+.about-hero .overlay {
+  z-index: 1;
+}
+
+.about-hero .container {
+  z-index: 2;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+}
+
