@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | CoffeeWorld</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #3b241a, #1e1e1e);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+    .coming-soon {
+      min-height: 100vh;
+    }
+    .steam-wrap {
+      position: relative;
+    }
+    .steam {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 20px;
+      height: 60px;
+      background: radial-gradient(ellipse at center, rgba(255,255,255,0.4) 0%, transparent 70%);
+      animation: steam-up 2.5s ease-in-out infinite;
+      transform: translateX(-50%);
+    }
+    @keyframes steam-up {
+      0% {
+        opacity: 0.6;
+        transform: translate(-50%, 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -60px) scale(1.5);
+      }
+    }
+    .btn-brand {
+      background-color: #f4c430;
+      border: none;
+      color: #000;
+    }
+    .btn-brand:hover {
+      background-color: #e0b300;
+      color: #000;
+    }
+    .notify-form input {
+      border-radius: 30px;
+      border: none;
+      padding: 10px 20px;
+      margin-right: 10px;
+    }
+    .notify-form button {
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+  <section class="coming-soon d-flex flex-column justify-content-center align-items-center text-center px-3">
+    <div class="coming-content">
+      <!-- Decorative Image + Steam -->
+      <div class="steam-wrap d-inline-block">
+        <img src="images/coffee2.png" alt="Coffee Cup" class="mb-4" style="max-width: 120px;" data-aos="zoom-in">
+        <div class="steam"></div>
+      </div>
+      <h1 class="display-4 fw-bold" data-aos="fade-up">Something Exciting is Brewing!</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="150">We're working hard to bring you the best of CoffeeWorld. Stay tuned!</p>
+      <a href="landing.html" class="btn btn-brand btn-lg mt-3" data-aos="fade-up" data-aos-delay="300">Back to Home</a>
+
+      <!-- Countdown Timer -->
+      <div class="countdown text-warning mt-4" style="font-size: 1.2rem;" data-aos="fade-up" data-aos-delay="400">
+        Launching in: <span id="countdown"></span>
+      </div>
+
+      <!-- Notify Me Form -->
+      <form class="notify-form d-flex justify-content-center align-items-center mt-4" data-aos="fade-up" data-aos-delay="500" onsubmit="event.preventDefault(); handleNotify();">
+        <input type="email" id="notifyEmail" class="form-control w-auto" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-brand">Notify Me</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast bg-dark text-white" id="comingSoonToast" data-bs-delay="3000">
+      <div class="toast-body">
+        ☕ Exciting things are brewing... Stay tuned!
+      </div>
+    </div>
+    <div class="toast bg-success text-white" id="notifyToast" data-bs-delay="3000">
+      <div class="toast-body">
+        You will be notified when we launch. Thank you!
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Show initial toast
+    window.addEventListener('load', () => {
+      const toast = new bootstrap.Toast(document.getElementById('comingSoonToast'));
+      toast.show();
+    });
+
+    // Countdown Logic (30 days from now)
+    const countdown = document.getElementById('countdown');
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 30);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      countdown.textContent = `${days} Days`;
+    }
+    setInterval(updateCountdown, 1000);
+
+    // Notify Me Handler
+    function handleNotify() {
+      const toast = new bootstrap.Toast(document.getElementById('notifyToast'));
+      toast.show();
+      document.getElementById('notifyEmail').value = '';
+    }
+  </script>
+</body>
+</html>

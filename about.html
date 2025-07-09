@@ -10,26 +10,51 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand text-warning fw-bold" href="index.html">Coffee World</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-warning" href="#">About</a></li>
-          <li class="nav-item"><a class="nav-link text-light" href="#">Products</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand fw-bold" href="#">Coffee World</a>
 
-  <!-- Hero Section -->
-<section class="about-hero position-relative text-white" style="background-image: url('images/about-hero.webp'); background-size: cover; background-position: center; height: 60vh;">
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.6);"></div>
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="landing.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+            <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Gift Boxes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="coming-soon.html" tabindex="-1" aria-disabled="true">Coming Soon</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="about-hero position-relative text-white" style="background-image: url('images/about-hero.webp'); background-size: cover; background-position: center; height: 70vh;">
+  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(rgba(75, 44, 32, 0.8), rgba(30, 30, 30, 0.9));"></div>
   <div class="container h-100 position-relative d-flex flex-column justify-content-center align-items-center text-center">
     <h1 class="display-4 fw-bold">Our Story</h1>
     <p class="lead">From a love of coffee to a community of brewers and dreamers.</p>
@@ -38,49 +63,79 @@
 
 
   <!-- About Intro Section -->
-  <section class="py-5" style="background-color: #f8f9fa;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="images/mission.jpg" class="img-fluid rounded shadow" alt="Mission">
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h2 class="text-dark fw-bold">Our Mission</h2>
-          <p>At CoffeeWorld, we aim to bring people together over a great cup of coffee. Whether it's your first sip of the morning or your afternoon break, we want to be a part of your ritual.</p>
-          <h2 class="text-dark fw-bold mt-4">Our Vision</h2>
-          <p>To be a global brand known not just for our coffee, but for building a culture of creativity, connection, and comfort — one cup at a time.</p>
+ <section class="mission-vision-section text-white py-5" style="background: linear-gradient(135deg, #4b2c20, #1e1e1e);">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      
+      <!-- Image Column -->
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="images/mission.jpg" class="img-fluid rounded shadow-lg" alt="Coffee beans">
+      </div>
+
+      <!-- Text Column with Improved Spacing -->
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="150">
+        <div class="bg-dark bg-opacity-75 p-5 rounded-4 shadow-lg">
+          <h3 class="fw-bold text-warning mb-3">Our Mission</h3>
+          <p class="mb-4" style="line-height: 1.8;">
+            At <strong>CoffeeWorld</strong>, we aim to bring people together over a great cup of coffee.
+            Whether it's your first sip of the morning or your afternoon break, we want to be a part of your ritual.
+          </p>
+          <h3 class="fw-bold text-warning mb-3">Our Vision</h3>
+          <p style="line-height: 1.8;">
+            To create a space where coffee lovers can explore, learn, and connect —
+            one cup at a time. We believe coffee is more than a beverage — it’s an experience.
+          </p>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Timeline Section -->
-  <section class="timeline-section py-5 bg-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Our Journey</h2>
-        <p class="text-muted">How CoffeeWorld brewed its way into hearts</p>
+  <section class="timeline-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Journey</h2>
+      <p class="text-muted">How CoffeeWorld brewed its way into hearts</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Year 2018 -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="p-4 bg-light border-start border-4 border-warning shadow-sm rounded">
+          <h5 class="fw-bold mb-2">2018</h5>
+          <p class="mb-0">We began as a small coffee stall with a big dream — to bring handcrafted coffee to everyone.</p>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-right">
-          <h5 class="fw-bold text-dark">2018</h5>
-          <p>We began as a small coffee stall with a big dream — to bring handcrafted coffee to everyone.</p>
+
+      <!-- Year 2020 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 bg-light border-start border-4 border-warning shadow-sm rounded">
+          <h5 class="fw-bold mb-2">2020</h5>
+          <p class="mb-0">Expanded into our first cafe and started sourcing beans directly from local farmers.</p>
         </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h5 class="fw-bold text-dark">2020</h5>
-          <p>Expanded into our first cafe and started sourcing beans directly from local farmers.</p>
+      </div>
+
+      <!-- Year 2023 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 bg-light border-start border-4 border-warning shadow-sm rounded">
+          <h5 class="fw-bold mb-2">2023</h5>
+          <p class="mb-0">Launched our online store and reached coffee lovers across the country.</p>
         </div>
-        <div class="col-md-6" data-aos="fade-right">
-          <h5 class="fw-bold text-dark">2023</h5>
-          <p>Launched our online store and reached coffee lovers across the country.</p>
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <h5 class="fw-bold text-dark">2025</h5>
-          <p>Now building a vibrant coffee community with recipes, tips, and inspiration for all.</p>
+      </div>
+
+      <!-- Year 2025 -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="p-4 bg-light border-start border-4 border-warning shadow-sm rounded">
+          <h5 class="fw-bold mb-2">2025</h5>
+          <p class="mb-0">Now building a vibrant coffee community with recipes, tips, and inspiration for all.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Testimonials Section -->
   <section class="testimonials-section py-5 bg-dark text-white">

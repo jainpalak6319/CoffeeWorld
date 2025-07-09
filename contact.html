@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | CoffeeWorld</title>
+
+  <!-- Bootstrap & AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand fw-bold" href="#">Coffee World</a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="landing.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="shop.html">Shop</a></li>
+            <li><a class="dropdown-item" href="recipes.html">Recipes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Gift Boxes</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-muted" href="coming-soon.html" tabindex="-1" aria-disabled="true">Coming Soon</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="py-5 text-center text-white" style="background: linear-gradient(135deg, #3b241a, #1e1e1e);">
+  <div class="container">
+    <h1 class="display-4 fw-bold" data-aos="fade-down">Get in Touch</h1>
+    <p class="lead" data-aos="fade-up">We'd love to hear from you! Whether it's feedback, partnership ideas, or questions.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5" style="background-color: #f8f1e7;">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Form -->
+      <div class="col-md-7" data-aos="fade-right">
+        <h3 class="mb-4">Send a Message</h3>
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="name" required />
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="email" required />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message *</label>
+            <textarea class="form-control" id="message" rows="5" required></textarea>
+            <div class="invalid-feedback">Please enter a message.</div>
+          </div>
+          <button type="submit" class="btn btn-brand px-4">Send</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-5" data-aos="fade-left">
+        <h3 class="mb-4">Contact Info</h3>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="bi bi-geo-alt-fill text-dark me-2"></i> 123 Coffee Street, Beansville</li>
+          <li class="mb-3"><i class="bi bi-envelope-fill text-dark me-2"></i> hello@coffeeworld.com</li>
+          <li class="mb-3"><i class="bi bi-phone-fill text-dark me-2"></i> +91 98765 43210</li>
+        </ul>
+        <div class="mt-4">
+          <a href="#" class="text-dark me-3"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-dark me-3"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-twitter fs-4"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Google Map -->
+<section>
+  <div class="container-fluid px-0">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1542586271213!2d-122.42067968468167!3d37.77851977975847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c4f404ff3%3A0x2a2b1ba2d6c7a7f!2sBlue%20Bottle%20Coffee!5e0!3m2!1sen!2sin!4v1690000000000"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;">
+  <div id="toastSuccess" class="toast align-items-center text-white bg-success border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body">
+        Your message has been sent successfully!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 <span class="text-warning">CoffeeWorld</span>. All rights reserved.</p>
+    <small>Crafted with ☕ and ❤️</small>
+  </div>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+
+  // Form validation + toast
+  const form = document.getElementById('contactForm');
+  const toastEl = document.getElementById('toastSuccess');
+  const toast = new bootstrap.Toast(toastEl);
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+    } else {
+      form.reset();
+      form.classList.remove('was-validated');
+      toast.show();
+    }
+  });
+</script>
+
+</body>
+</html>

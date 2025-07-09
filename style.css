@@ -20,7 +20,7 @@ background-color: #343a40;
 color: white;
 }
 
-.btn-brand {
+/* .btn-brand {
   background-color: #f4c430;
   border: none;
   color: #000;
@@ -33,6 +33,37 @@ color: white;
   color: #f4c430 !important;
   transition: 0.3s;
 }
+ */
+  /* Custom hover effects */
+  .navbar-nav .nav-link {
+    color: #000 !important;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #6F4E37;
+    transition: width 0.3s;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #6F4E37 !important;
+    font-weight: 600;
+  }
+
+  .navbar-brand {
+    color: #6F4E37 !important;
+  }
 /*==============Landing Page==============*/
 .about-section {
   background-size: cover;
@@ -103,4 +134,132 @@ footer.footer {
   z-index: 2;
   text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
+.mission-vision-section {
+  background: linear-gradient(135deg, #523529, #1e1e1e);
+  color: #fff;
+}
+.btn-brand {
+  background-color: #f4c430;
+  border: none;
+  color: #000;
+}
+.btn-brand:hover {
+  background-color: #e0b300;
+  color: #000;
+}
+/*=====================Recipe Page====================*/
 
+/* Modal Content Styling */
+.modal-content {
+  background-color: #f8f1e7; /* light coffee tone */
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal-header {
+  background-color: #3b241a !important; /* deep brown */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Modal Title */
+.modal-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Modal Body */
+.modal-body {
+  color: #4a3a32;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* List inside Modal */
+.modal-body ul {
+  padding-left: 1.2rem;
+}
+
+.modal-body li {
+  margin-bottom: 6px;
+}
+
+/* Button Close Icon */
+.btn-close-white {
+  filter: invert(1);
+}
+
+/* Optional: Add border to modal if needed */
+.modal-dialog {
+  border-radius: 12px;
+}
+
+/*=====================Shop Page====================*/
+ .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 15px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      background-color: #5a3517;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+/*=======================Contact Page==============*/
+/* Section Headings */
+h3 {
+  font-weight: 700;
+  color: #3b241a;
+}
+
+/* Input Focus */
+input:focus,
+textarea:focus {
+  border-color: #f4c430;
+  box-shadow: 0 0 0 0.2rem rgba(244, 196, 48, 0.25);
+}
+
+/* Button Customization */
+.btn-brand {
+  background-color: #f4c430;
+  border: none;
+  color: #000;
+}
+.btn-brand:hover {
+  background-color: #dcb000;
+  color: #000;
+}
+
+/* Toast */
+.toast-body {
+  font-weight: 500;
+}
+
+/* Contact Section Card Feel */
+form, .contact-info {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+/* Social Icons Hover */
+a i:hover {
+  color: #f4c430;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
